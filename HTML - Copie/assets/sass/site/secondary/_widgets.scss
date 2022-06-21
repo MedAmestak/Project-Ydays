@@ -1,0 +1,99 @@
+.widget {
+	margin-bottom: 60px;
+	margin-top: -5px;
+	ul, ol {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	.widget-title-area {
+		position: relative;
+	}
+	.widget-title {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 25px;
+		text-transform: capitalize;
+		position: relative; 
+		padding-bottom: 15px;
+    }
+	pre {
+		padding: 0.5em
+	}
+	label {
+		margin-bottom: 0;
+	}
+	option {
+		padding: 0.2em 1em;
+	}
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	input[type="password"],
+	input[type="search"],
+	textarea {
+		padding: 0.5em 1em;
+		&:focus {
+		 	box-shadow: none !important;
+		}
+	}
+}
+.sidebar-items {
+	.widget {
+		margin-bottom: 65px;
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+	.widget-title {
+		margin-bottom: 20px;
+	}
+}
+
+.search-page-sidebar {
+	background-color: $color__secondary;
+	padding: 50px 25px 1px;
+	@media only screen and (max-width: 1199px) {
+		padding: 50px 15px 1px;
+	}
+	.widget {
+		ul > li {
+			padding: 9px 0;
+			&:last-child {
+				padding-bottom: 0;
+			}
+		}
+		.widget-title {
+			margin-bottom: 5px;
+		}
+		input[type="checkbox"] {
+			display: none;
+			+ label {
+				color: $color_text_main;
+				position: relative;
+				padding-left: 22px;
+				line-height: 1.2em;
+				text-transform: capitalize;
+				cursor: pointer;
+				font-weight: normal;
+				font-size: 16px;
+				&:before {
+					border: 2px solid #4E5158;
+					content: "";
+					height: 12px;
+					left: 1px;
+					position: absolute;
+					top: 4px;
+					-webkit-transition: all 0.15s ease-in 0s;
+					transition: all 0.15s ease-in 0s;
+					width: 12px;
+					background-color: transparent;
+					border-radius: 50%;
+				}
+			}
+			&:checked + label:before {
+				background-color: $color__primary;
+			}
+		}
+	}
+}

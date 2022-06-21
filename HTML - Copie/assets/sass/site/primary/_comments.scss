@@ -1,0 +1,260 @@
+.comment-content a {
+	word-wrap: break-word;
+}
+.bypostauthor {
+	display: block;
+}
+.comment-content a {
+	word-wrap: break-word;
+}
+.comment-content {
+	font-size: 16px;
+	p {
+		line-height: 1.6em;
+	}
+    @media only screen and (max-width: 767px){
+        font-size: 15px;
+		margin-bottom: 15px;
+	}
+	@media only screen and (max-width: 400px){
+		margin-top: 10px;
+	}
+	ul, ol {
+		li {
+			margin-top: 10px;
+			line-height: 1.6em;
+		}
+	}
+	> ul,
+	> ol {
+		padding-left: 20px;
+	}
+	a {
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+.bypostauthor {
+	display: block;
+}
+
+.cancel-comment-reply-link {
+	bottom: -2px;
+	display: inline-block;
+	left: 0.6em;
+	position: relative;
+}
+.logged-in-as {
+	margin-bottom: 0.7em !important;
+	padding: 0 15px;
+}
+.comments-area {
+	overflow: hidden;
+	margin: 60px 0 0;
+	.comment-list, .children {
+		list-style: none;
+		padding: 0;
+	}
+    .comments-title {
+        color: $color__heading;
+        font-size: 24px;
+        font-weight: 700;
+		margin-bottom: 30px;
+		position: relative;
+    }
+	.comment-list {
+		margin-bottom: 0px;
+		border-top: none;
+		.comment .comment-respond {
+			margin-bottom: 75px;
+		}
+		> .comment:last-child {
+			.comment-body:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.comment-body {
+		overflow: hidden;
+		margin-bottom: 45px;
+	}
+	.comment-author {
+	    float: left;
+	    margin-right: 20px;
+		width: 85px;
+		@media only screen and (max-width: 575px) {
+			margin-right: 15px;
+		}
+		.avatar {
+			width: 85px;
+			height: 85px;
+			border-radius: 50%;
+		}
+	}
+	.date {
+		display: block;
+		font-size: 14px;
+		color: $color_text_main;
+		margin-top: 0;
+		[class*='fa-'] {
+			color: $color__primary;
+			padding-right: 5px;
+			display: inline-block;
+		}
+	}
+	.comment-details {
+		position: relative;
+		@include table_display;	
+	}
+	.comment-metadata {
+	    margin-bottom: 10px;
+		color: $color__heading; 
+	    .author {
+	    	font-size: 18px;
+			font-weight: 700;
+			font-family: $font_heading;
+			line-height: 1.25em;
+			@media only screen and (max-width: 767px) {
+				font-size: 17px;
+			}
+	    }
+	    .says, .comment-edit-link {
+	    	color: #777;
+	    }
+	}
+	.children {
+		margin-left: 108px;
+		@media only screen and (max-width: 1199px) {
+			margin-left: 90px;
+		}		
+		@media only screen and (max-width: 992px) {
+			margin-left: 75px;
+		}		
+		@media only screen and (max-width: 767px) {
+			margin-left: 50px;
+		}		
+		@media only screen and (max-width: 450px) {
+			margin-left: 30px;
+		}		
+		@media only screen and (max-width: 400px) {
+			margin-left: 25px;
+		}
+	}
+	.comment-navigation {
+		 margin-bottom: 3.5em;
+		.nav-links {
+			.nav-previous {
+				float: left;
+			}
+			.nav-next {
+				float: right;
+			}
+			span {
+				font-size: 18px;
+			}
+			a {
+				background-color: #232c3b;
+				color: white;
+				border-radius: 5px;
+			}	
+		}
+	}
+	
+}
+.comment-respond {
+	label {
+		font-weight: 600;
+		font-size: 16px;
+	}
+	.comment-reply-title {
+		color: $color__heading;
+		font-size: 24px;
+		font-weight: 700;
+		margin-bottom: 25px;
+		line-height: 1.2em;
+		margin-bottom: 30px;
+		position: relative;
+	}
+}
+
+.comment-respond {
+	margin: 55px 0px 0;
+	p {
+		margin-bottom: 1em;
+	}
+    [class*="col-"] {
+        margin-bottom: 25px;
+    }
+    textarea {
+        min-height: 130px;
+        max-width: 100%;
+    }
+	.form-submit {
+		margin-bottom: 0;
+		padding: 0 15px;
+	}
+	.comment-subscription-form {
+		display: none;
+	}
+	.comment-form-rating {
+		margin-bottom: 1em;
+	}
+	.form-submit {
+		width: 100%;
+		padding-top: 5px;
+	}
+	#submit,
+	.submit {
+		border-color: $deep_cerise;
+		border-radius: 0;
+		background: $deep_cerise;
+		color: $white;
+		padding: 15px 45px;
+    	font-size: 16px;
+    	font-weight: bold;
+    	text-transform: uppercase;
+	}
+}
+#review_form {
+	.form-submit {
+		padding: 0;
+	}
+}
+
+.no-comments {
+	position: relative;
+	padding: 12px 20px;
+	padding: 0.75rem 1.25rem;
+	margin-bottom: 16px;
+	margin-bottom: 1rem;
+	border: 1px solid transparent;
+	border-radius: .25rem;
+	color: #721c24;
+	background-color: #f8d7da;
+	border-color: #f5c6cb;
+}
+
+.comment-reply-link {
+    padding: 8px 22px;
+	font-size: 15px;
+	border: 1px solid $color__border-one;
+    line-height: normal;
+    font-weight: 600;
+    display: inline-block;
+    background-color: transparent;
+	border-radius: 30px;
+	color: $white;
+	-webkit-transition: all 0.35s ease-in-out;
+	transition: all 0.35s ease-in-out;
+	&:hover {
+		background: $color__primary;
+		color: $white;
+		border-color: $color__primary;
+	}
+	@media only screen and (min-width: 600px) {
+		position: absolute;
+		right: 0;
+		top: -55px;
+	}
+}

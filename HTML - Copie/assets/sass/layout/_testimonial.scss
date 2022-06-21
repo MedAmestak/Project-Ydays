@@ -1,0 +1,83 @@
+.testimonial-item {
+    overflow: hidden;
+    background-color: $color__secondary;
+    padding: 50px 30px;
+    @media only screen and (max-width: 991px) {
+        padding: 40px 20px;
+    }
+    @media only screen and (max-width: 480px) {
+        padding: 35px 15px 32px;
+    }
+    .film-rating {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        font-size: 16px;
+        > .fa {
+            display: inline-block;
+            padding-right: 5px;
+            color: $yellow;
+            font-size: 15px;
+        }
+    }
+    .client-header {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        margin-bottom: 15px;
+        .client-thumb {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            -webkit-box-flex: 0;
+                -ms-flex: 0 0 50px;
+                    flex: 0 0 50px;
+            max-width: 50px;
+        }
+        .client-info {
+            -webkit-box-flex: 0;
+                -ms-flex: 0 0 calc(100% - 50px);
+                    flex: 0 0 calc(100% - 50px);
+            max-width: calc(100% - 50px);
+            padding-left: 15px;
+        }
+    }
+        
+    .client-info {
+        position: relative;
+        .client-name {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 0px;
+            line-height: 1.2em;
+            a:hover,
+            a:focus {
+                color: $color__primary;
+            }
+        }
+        .client-designation {
+            line-height: 1.4em;
+            margin-bottom: 0px;
+            font-size: 14px;
+        }
+    }
+    .details {
+        position: relative;
+        font-size: 18px;
+        p {
+            line-height: 1.6em;
+            position: relative;
+            z-index: 2;
+        }
+    }
+}

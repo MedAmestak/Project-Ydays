@@ -1,0 +1,57 @@
+.error-page-block {
+    position: relative;
+    .error-shape-area > img {
+        position: absolute;
+        &.shape-left {
+            bottom: 0;
+            left: 0;
+        }
+        &.shape-right {
+            right: 0;
+            top: 0;
+        }
+    }
+    .row {
+        min-height: 100vh;
+    }
+    .error-page-content {
+        padding: 100px 0;
+        .image-not-found {
+            margin-bottom: 50px;
+            @media only screen and (max-width: 400px){
+                margin-bottom: 40px;
+            }
+        }
+        .error-title {
+            font-size: 60px;
+            font-weight: 700;
+            text-transform: capitalize;
+            line-height: 1.25em;
+            margin-bottom: 50px;
+            @media only screen and (max-width:767px){
+                margin-bottom: 40px;
+                font-size: 52px;
+            }
+            @media only screen and (max-width:480px){
+                font-size: 42px;
+            }
+            @media only screen and (max-width: 400px){
+                font-size: 32px;
+                margin-bottom: 30px;
+            }
+            > span {
+                display: block;
+                color: $color__primary; 
+            }
+        }
+        .btn-error {
+            display: inline-block;
+            border-bottom: 1px solid $white;
+            padding: 0;
+            font-size: 20px;
+            @media only screen and (max-width:480px){
+                font-size: 18px;
+            }
+        }
+    }
+}

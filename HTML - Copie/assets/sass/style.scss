@@ -1,0 +1,133 @@
+/*
+Template Name: Voxliv - Video On Demand HTML Template
+Template URI: https://themeforest.net/user/rifat636
+Author: rifat636
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Typography 
+    [ ## Heading ] 
+    [ ## Others Typography ]
+# Elements
+    [ ## Font Size ]
+    [ ## Font Weight ]
+    [ ## Margin Element ]
+    [ ## Padding Element ]
+    [ ## Color Element ]
+    [ ## Background Element ]
+    [ ## Extra Background ]
+    [ ## Overlay Element ]
+    [ ## Lists ]
+    [ ## Post, Page, Comments Table ]
+    [ ## Others Element ]
+    [ ## Grid Element ]
+# Forms
+	[ ## Buttons ]
+	[ ## Fields ]
+# Modules 
+	[ ## Alignments ]
+	[ ## Clearings ]
+	[ ## Infinite Scroll ]
+# Header Content
+	[ ## Preloader ]
+	[ ## Header ]
+    [ ## Sticky header ]
+# Navigation
+	[ ## Links ]
+    [ ## Menus ]
+	[ ## Pagination ]
+        [ ### Post Navigation ]
+	[ ## Navigation responsive ]
+# layout
+    [ ## Hero Block ]
+    [ ## Auction ]
+    [ ## Winners ]
+    [ ## Testimonial ]
+    [ ## Sections ]
+        [ ### Movie Play ]
+        [ ### Choose Us ]
+        [ ### Choose Plan ]
+        [ ### Subscribe Billing ]
+    [ ## Blog ]
+# Others
+	[ ## Single Posts ]
+# site content
+	[ ## About Page ]
+	[ ## Contact Page ]
+	[ ## 404 Page ]
+	[ ## Dashboard Page ]
+	[ ## Registration Page ]
+	[ ## faqs Page ]
+	[ ## Posts and pages ]
+	    [ ### Page Title ]
+	    [ ### Breadcrumb ]
+	    [ ### Page info Content ]
+	[ ## Comments ]
+	[ ## Widgets ]
+	[ ## Widgets Content ]
+# Footer
+--------------------------------------------------------------*/
+@import "variables-site/variables-site";
+@import "mixins/mixins-master";
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+@import "typography/typography";
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+@import "elements/elements";
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+@import "forms/forms";
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+@import "modules/alignments";
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+@import "modules/clearings";
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+@import "modules/infinite-scroll";
+
+/*--------------------------------------------------------------
+# Header Content
+--------------------------------------------------------------*/
+@import "header/header";
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+@import "navigation/navigation";
+
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+@import "layout/layout";
+
+/*--------------------------------------------------------------
+# Others
+--------------------------------------------------------------*/
+@import "others/others";
+
+/*--------------------------------------------------------------
+# Site Content
+--------------------------------------------------------------*/
+@import "site/site";
+
+/*--------------------------------------------------------------
+# Footer Content
+--------------------------------------------------------------*/
+@import "footer/footer";

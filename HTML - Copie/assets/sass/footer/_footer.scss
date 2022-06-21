@@ -1,0 +1,142 @@
+/*--------------------------------------------------------------
+# Footer-block
+--------------------------------------------------------------*/
+.site-footer {
+    background-color: $color__footer;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    .footer-shape-area {
+        > div{
+            position: absolute;
+            &.footer-shape-left {
+                bottom: 0;
+                left: 0;
+            }
+            &.footer-shape-right {
+                right: 0;
+                top: 0;
+            }
+        }
+        + div {
+            position: relative;
+            z-index: 2;
+        }
+    }
+    .widget .widget-title {
+        font-size: 22px;
+        position: relative;
+        margin-bottom: 5px;
+        @media only screen and (min-width: 992px) and (max-width: 1199px) {
+            font-size: 20px;
+        }
+        > .dots-right {
+            height: 10px;
+            width: 10px;
+            border-radius: 50%;
+            background-color: $color__primary;
+            position: relative;
+            display: inline-block;
+            margin-left: 7px;
+            top: -2px;
+            &:before,
+            &:after {
+                border-radius: inherit;
+                background-color: inherit;
+                width: 100%;
+                height: 100%;
+                top: 50%;
+                position: absolute;
+                content: "";
+            }
+            &:before {
+                transform: translateY(-50%) scale(0.78);
+                right: -13px;
+            }
+            &:after {
+                transform: translateY(-50%) scale(0.52);
+                right: -24px;
+            }
+        }
+    }
+    .footer-widget-area {
+        margin-top: -7px;
+        margin-bottom: 55px;
+        @media only screen and (max-width: 991px) {
+            margin-bottom: 40px;
+        }
+        .row > [class='col-lg-4'] {
+            -webkit-box-flex: 0;
+                -ms-flex: 0 0 33%;
+            flex: 0 0 33%;
+            max-width: 33%;
+            @media only screen and (min-width: 992px) and (max-width: 1199px) {
+                flex: 0 0 30%;
+                max-width: 30%;
+            }
+            @media only screen and (max-width: 991px) {
+                -webkit-box-flex: 0;
+                    -ms-flex: 0 0 100%;
+                        flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+        .row > [class='col-lg-2'] {
+            -webkit-box-flex: 0;
+                -ms-flex: 0 0 20%;
+                    flex: 0 0 20%;
+            max-width: 20%;
+            @media only screen and (min-width: 992px) and (max-width: 1199px) {
+                flex: 0 0 21.5%;
+                max-width: 21.5%;
+            }
+            @media only screen and (max-width: 991px) {
+                -webkit-box-flex: 0;
+                    -ms-flex: 0 0 100%;
+                        flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+        .row > [class='col-lg-3'] {
+            -webkit-box-flex: 0;
+                -ms-flex: 0 0 27%;
+                    flex: 0 0 27%;
+            max-width: 27%;
+            @media only screen and (max-width: 991px) {
+                -webkit-box-flex: 0;
+                    -ms-flex: 0 0 100%;
+                        flex: 0 0 100%;
+                max-width: 100%;
+            }
+        }
+    }
+}
+.copyright-text {
+    margin-bottom: 0;
+    > p {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+    a {
+        display: inline-block;
+        padding-left: 5px;
+        color: $color__primary;
+        &:hover {
+            color: $golden;
+        }
+    }
+}
+.footer-bottom-area {
+    border-top: 1px solid rgba($color__border-two,0.8);
+    padding: 25px 0;
+    @media only screen and (max-width: 991px) {
+        padding: 20px 0;
+    }
+    @media only screen and (max-width: 480px) {
+        font-size: 15px;
+    }
+}

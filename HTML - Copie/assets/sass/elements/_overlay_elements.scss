@@ -1,0 +1,125 @@
+/*-------------------------------------------------
+    [ ## Overlay Element ]
+*/
+.bg-image {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.bg-fixed {
+	background-attachment: fixed;
+}
+.bg-image-right {
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: cover;
+}
+.bg-image-100 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+.hg-background {
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	width: 100%;
+	z-index: -2;
+}
+.bg-overlay {
+	position: relative;
+	&:before {
+		content: "";
+		position: absolute;
+		background-color: $black;
+		opacity: 0.8;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		z-index: 1;
+	}
+	> div {
+		position: relative;
+		z-index: 2;
+	}
+}
+.bg-overlay-primary {
+	position: relative;
+	&:before {
+		content: "";
+		position: absolute;
+		background-color: $color__primary;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		z-index: 1;
+		opacity: 0.92;
+	}
+	> div {
+		position: relative;
+		z-index: 2;
+	}
+}
+.bg-overlay-gradient {
+	position: relative;
+	&:before {
+		content: "";
+		position: absolute;
+		background: -webkit-linear-gradient( 35deg, $curious_blue, $color__primary );
+		background: linear-gradient( 55deg, $curious_blue, $color__primary );
+		width: 100%;
+		height: 100%;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		z-index: -1;
+	}
+	> div {
+		position: relative;
+		z-index: 2;
+	}
+}
+.overlay-bg-snow {
+	position: relative;
+	background-size: cover;
+	background-position: center center;
+	&:before {
+		content: "";
+		position: absolute;
+		background-color: rgba(#fff ,0.95);
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+	}
+}
+.overlay-bg-snow-95 {
+	position: relative;
+	background-size: cover;
+	background-position: center center;
+	&:before {
+		content: "";
+		position: absolute;
+		background-color: rgba(#fff ,0.95);
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+	}
+}

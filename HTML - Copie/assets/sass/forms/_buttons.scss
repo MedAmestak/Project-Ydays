@@ -1,0 +1,228 @@
+/*-------------------------------------------------
+    [ ## Buttons ]
+*/
+
+button {
+	@include prefixed(transition, all .25s ease);
+}
+
+input[type="button"] {
+	@extend button;
+}
+
+input[type="reset"] {
+	@extend button;
+}
+
+input[type="submit"] {
+	@extend button;
+	&:hover {
+		color: $white;
+	}
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	cursor: pointer;
+	-webkit-appearance: button;
+	&:focus {
+		outline: none;
+	}	
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+.btn {
+    -webkit-transition: all 0.3s ease 0.02s;
+    transition: all 0.3s ease 0.02s;
+}
+.btn:active,
+.btn:focus {
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.125) inset;
+}
+.btn {
+    border: 0px solid;
+    border-radius: 0px;
+    font-weight: 600;
+    font-size: 16px;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    font-family: $white;
+    font-family: $font_heading;
+}
+
+.btn-default {
+    border: 0px solid $color__border-one;
+    border-radius: 5px;
+	padding: 10px 20px;
+    color: $white;
+    background-color: $color__primary;
+    text-transform: capitalize;
+    position: relative;
+    z-index: 0;
+    -webkit-transition: all .4s;
+    transition: all .4s;
+    overflow: hidden;
+    &:hover,
+    &:focus {
+        background-color: $white_smoke2 !important;
+        color: $color__primary !important;
+    }
+    &.btn-red {
+        border: 2px solid $white;
+        background-color: $red2;
+        padding: 17px 40px 15px;
+        color: $white;
+        &:hover,
+        &:focus {
+            background-color: $red !important;
+        }
+    }
+}
+.btn-primary.active:focus:not(:disabled):not(.disabled), 
+.btn-primary:focus {
+    box-shadow: 0 0 0 0rem rgba(38, 143, 255, 0);
+}
+
+.btn-primary {
+    color: $white;
+    background-color: $color__primary;
+    border-color:  $color__primary;
+    &:focus,
+    &:active,
+    &:hover {
+        color: $color__primary !important;
+        background-color: #F9F9F9 !important;
+        border: 1px solid $color__border-one;
+    }
+}
+.btn-white { 
+    background-color: $white;
+    color: $color__primary;
+    &:focus,
+    &:hover {
+        background-color: $color__primary !important;
+        color: $white !important;
+    }
+}
+.form-group-btn {
+    margin: -10px;
+    > [class*='btn-'] {
+        margin: 10px;
+        display: inline-block;
+    }
+    .btn-video {
+        width: 65px;
+        height: 65px;
+    }
+    @media only screen and (max-width: 575px) {
+        margin:-7px;
+        > [class*='btn-'] {
+            margin: 7px;
+        }
+    }
+}
+
+.video-btn {
+    position: relative;
+    width: 85px;
+    height: 85px;
+    line-height: 85px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-transition: .5s;
+    transition: .5s;
+    display: inline-block;
+    z-index: 0;
+    &:after {
+        display: block;
+        content: '';
+        width: 95px;
+        height: 95px;
+        line-height: 95px;
+        border-radius: 50%;
+        background-color: $color__primary;
+        position: absolute;
+        opacity: 0.2;
+        text-align: center;
+        top: 49%;
+        left: 50%;
+        -webkit-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+        z-index: -1;
+    }
+    &:before {
+        display: block;
+        content: '';
+        width:105px;
+        height:105px;
+        line-height:105px;
+        border-radius: 50%;
+        background-color: $color__primary;
+        opacity: 0.42;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+        z-index: -1;
+        -webkit-animation: play-pluse 1500ms ease-out infinite;
+        animation: play-pluse 1500ms ease-out infinite;
+    }
+    &:hover,
+    &:focus {
+        color: $white;
+    }
+    > span {
+        color: $color__primary;
+        position: relative;
+        z-index: 5;
+        background-color: $white;
+        display: block;
+        border-radius: inherit;
+        height: 100%;
+        width: 100%;
+        line-height: 85px;
+        &:before {
+            font-size: 30px;
+        }
+    }
+}
+
+
+.comment-navigation {
+	.nav-links {
+		a {
+			background: $white;
+			display: inline-block;
+			padding: 0.5em 1.8em;
+			letter-spacing: 0.02em;
+			&:hover {
+				color: $white;
+			}
+		}	
+	}
+}
+
+.mfp-wrap {
+	button:hover {
+		background: transparent !important;
+	}
+}
+
+.btn-play {
+	padding: 15px;
+	display: inline-block;
+	font-size: 16px;
+	height: 55px;
+	width: 55px;
+	line-height: 25px;
+}

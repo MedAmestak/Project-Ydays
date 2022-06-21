@@ -1,0 +1,173 @@
+.contact-support-content {
+    background-color: $color__secondary;
+    position: relative;
+    .support-icon {
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        top: 0;
+        left: 0;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        @media only screen and (max-width: 991px){
+            display: none;
+        }
+    }
+    .support-info {
+        padding: 70px 50px;
+        text-transform: uppercase;
+        font-size: 20px;
+        color: $white;
+        @media only screen and (max-width: 575px){
+            font-size: 18px;
+        }
+        @media only screen and (max-width: 400px){
+            padding: 60px 20px;
+        }
+        p {
+            line-height: 1.5em;
+        }
+        .support-no {
+            font-size: 100px;
+            font-weight: 700;
+            color: $color__primary;
+            margin-bottom: 10px;
+            line-height: 0.9em;
+            @media only screen and (max-width: 991px){
+                font-size: 80px;
+            }
+            @media only screen and (max-width: 575px){
+                font-size: 60px;
+            }
+        }
+    }
+    .support-thumb {
+        text-align: center;
+    }
+}
+
+.contact-info-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    .contact-info-item {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 33.33%;
+                flex: 0 0 33.33%;
+        max-width: 33.33%;
+        @media only screen and (max-width: 991px){
+            -webkit-box-flex: 0;
+                -ms-flex: 0 0 50%;
+                    flex: 0 0 50%;
+            max-width: 50%;
+            border-top: 2px solid $color__main-bg;
+            &:nth-child(1),
+            &:nth-child(2) {
+                border-top: 0px solid;
+            }
+        }
+        @media only screen and (max-width: 575px){
+            -webkit-box-flex: 0;
+                -ms-flex: 0 0 100%;
+                    flex: 0 0 100%;
+            max-width: 100%;
+            border-right: 0px solid !important;
+            &:nth-child(2) {
+                border-top: 2px solid $color__main-bg;
+            }
+        }
+        &:nth-child(3n) {
+            @media only screen and (min-width: 992px){
+                border-right: 0px solid;
+            }
+        }
+        &:nth-child(2n) {
+            @media only screen and (max-width: 991px){
+                border-right: 0px solid;
+            }
+        }
+    }
+}
+.contact-info-item {
+	background-color: $color__secondary;
+	padding: 55px 20px 50px;
+    text-align: center;
+    border-radius: 0px;
+    position: relative;
+    overflow: hidden;
+    border-right: 2px solid $color__main-bg;
+    @media only screen and (max-width: 767px){
+        padding: 40px 20px 44px;
+    }
+    .shape-icon {
+        line-height: 70px;
+        min-height: 70px;
+        margin-bottom: 25px;
+        @media only screen and (max-width: 767px){
+           margin-bottom: 15px;
+        }
+    }
+    .card-info {
+        p {
+            line-height: 1.7em;
+            margin-bottom: 0;
+            span,
+            a {
+                display: block;
+            }
+            a:hover,
+            a:focus {
+                color: $color__primary; 
+            }
+        }
+    }
+}
+#contact_form {
+    .error {
+        color: $red;
+        font-size: 14px;
+        font-weight: normal;
+    }
+    .success {
+        color: $green;
+        font-size: 18px;
+        font-weight: normal;
+    }
+}
+.contact-form-block {
+    .contact-form-area {
+        .section-heading {
+            padding-right: 60px;
+            margin-bottom: 40px;
+            @media only screen and (max-width: 1199px) {
+                padding-right: 0;
+            }
+        }
+    }
+    .contact-thumb {
+        padding-left: 50px;
+        margin-right: -190px;
+        @media only screen and (max-width: 1366px){
+            padding-left: 10px;
+            margin-right: -115px;
+        }
+        @media only screen and (max-width: 991px){
+            padding-left: 0px;
+            margin-right: 0px;
+        }
+    }
+    .contact-form-area {
+        .form-group {
+            margin-bottom: 30px;
+        }
+    }
+}

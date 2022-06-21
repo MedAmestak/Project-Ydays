@@ -1,0 +1,126 @@
+.about-us-block {
+    position: relative;
+    .mock-up-thumb {
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+        padding-top: 75px;
+        padding-left: 75px;
+        @media only screen and (max-width:480px){
+            padding-top: 35px;
+            padding-left: 35px;
+        }
+        &:before {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            background-color: $color__secondary;
+            height: calc(100% - 75px);
+            width: calc(100% - 75px);
+            z-index: 0;
+            @media only screen and (max-width:480px){
+                height: calc(100% - 35px);
+                width: calc(100% - 35px);
+            }
+        }
+        img {
+            position: relative;
+            z-index: 2;
+        }
+    }
+    .about-text-content {
+        .section-title {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.fanfact-promo-numbers {
+    margin: 0 -8px;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+                -ms-grid-row-align: flex-end;
+            align-items: flex-end;
+    @media only screen and (max-width: 1199px){
+        padding-top: 25px;
+    }
+    @media only screen and (max-width: 991px){
+        padding-top: 30px;
+    }
+    @media only screen and (max-width:575px){
+        margin: 0 -5px;
+    }
+    @media only screen and (max-width:480px){
+        margin-bottom: -30px;
+    }
+    [class*='col-'] {
+        padding: 0 8px;
+        @media only screen and (max-width:575px){
+            padding: 0 5px;
+        }
+        @media only screen and (max-width:480px){
+            max-width: 50%;
+            -webkit-box-flex: 0;
+                -ms-flex: 0 0 50%;
+                    flex: 0 0 50%;
+        }
+    }
+    .promo-number {
+        text-align: left;
+        position: relative;
+        overflow: hidden;
+        @media only screen and (max-width: 480px) {
+            margin-bottom: 30px;
+        }
+    }
+    .odometer-wrap {
+        font-size: 40px;
+        line-height: 0.85em;
+        font-weight: 700;
+        color: $white;
+        margin-bottom: 0px;
+        font-family: $font_heading;
+        text-transform: uppercase;
+        @media only screen and (max-width: 1199px){
+            font-size: 30px;
+        }
+        @media only screen and (max-width:480px){
+            font-size: 24px;
+        }
+        .odometer {
+            font-size: 60px;
+            line-height: 0.8em;
+            @media only screen and (max-width: 1199px){
+                font-size: 42px;
+            }
+            @media only screen and (max-width:480px){
+                font-size: 36px;
+            }
+        }
+        sub {
+            bottom: -8px;
+            left: 3px;
+            @media only screen and (max-width: 1199px){
+                bottom: -4px;
+            }
+        }
+    }
+	.promo-title {
+        color: $white;
+        font-size: 20px;
+        text-transform: capitalize;
+        font-weight: normal;
+        margin-bottom: 0;
+        margin-top: 5px;
+        @media only screen and (min-width:991px) and (max-width:1199px){
+            font-size: 16px;
+        }
+        @media only screen and (max-width:767px){
+            font-size: 18px;
+        }
+        @media only screen and (max-width:480px){
+            font-size: 16px;
+        }
+    }
+}

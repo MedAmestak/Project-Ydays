@@ -1,0 +1,107 @@
+.post {
+    margin-bottom: 70px;
+    @media only screen and (max-width: 767px) {
+        margin-bottom: 40px;
+    }
+    .post-thumb {
+        position: relative;
+        margin-bottom: 0;
+        > a {
+            display: block;
+            > img {
+                -webkit-transition: all 0.3s;
+                transition: all 0.3s;
+                width: 100%;
+            }
+        }
+        .social-share-area {
+            position: absolute;
+            bottom: -22px;
+            right: 30px;
+            @media only screen and (max-width: 575px){
+                right: 20px;
+            }
+        }
+    }
+    &:hover .post-thumb > a > img {
+        opacity: 0.9;
+    }
+    .entry-date {
+        text-transform: capitalize;
+        font-size: 16px;
+        margin-bottom: 15px;
+        > span {
+            display: inline-block;
+            padding-right: 8px;
+            font-size: 15px;
+            color: $color__primary;
+        }
+    }
+    .entry-cats {
+        margin-bottom: 20px;
+        font-size: 14px;
+        > a {
+            border: 1px solid $color__border-one;
+            background-color: $color__secondary;
+            display: inline-block;
+            padding: 1px 10px 2px;
+            margin-right: 3px;
+            margin-bottom: 5px;
+            text-transform: capitalize;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    .entry-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+        line-height: 1.25em;
+        font-weight: 700;
+        a:hover,
+        a:focus {
+            color: $color__primary;
+        }
+        @media only screen and (max-width: 575px){
+           font-size: 22px;
+        }
+    }
+    .post-details {
+        padding-top: 27px;
+        position: relative;
+        @media only screen and (max-width: 767px) {
+           padding-top: 25px;
+        }
+        .entry-bookmark {
+            color: $color__primary;
+            position: absolute;
+            right: -2px;
+            top: 30px;
+            a:hover {
+                color: $white !important;
+            }
+        }
+        .btn-default {
+            margin-top: 15px;
+        }
+    }
+}
+
+.blog-latest-items {
+    > .post:last-child {
+        margin-bottom: 0;
+        border-bottom: 0px solid;
+        @media only screen and (max-width: 767px) {
+            margin-bottom: 10px;
+        }
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+    .latest-news-block .row > .col-lg-4,
+    .blog-page-block .blog-latest-items > .row > .col-lg-4 {
+        -webkit-box-flex: 0;
+            -ms-flex: 0 0 50%;
+                flex: 0 0 50%;
+        max-width: 50%;
+    }
+}

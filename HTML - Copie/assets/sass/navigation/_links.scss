@@ -1,0 +1,18 @@
+a {
+	color: inherit;
+	@include prefixed(transition, all 0.3s);
+	&:hover,
+	&:focus,
+	&:active {
+		text-decoration: none;
+		color: $color__primary;
+	}
+	&:focus {
+		outline: none;
+	}
+	&:hover,
+	&:active {
+		outline: 0;
+		text-decoration: none;
+	}
+}
