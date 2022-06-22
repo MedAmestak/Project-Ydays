@@ -337,7 +337,112 @@
     <script src="assets/js/chartistPoint.js"></script>
     <script src="assets/js/main.js"></script><!-- main-js -->
 
+    <script type="module">
 
+        // Import the functions you need from the SDKs you need
+    
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js";
+        import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-database.js";
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-auth.js";
+    
+    
+        // TODO: Add SDKs for Firebase products that you want to use
+    
+        // https://firebase.google.com/docs/web/setup#available-libraries
+    
+    
+        // Your web app's Firebase configuration
+    
+        // Import the functions you need from the SDKs you need
+
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyBw9GLQmVGDAyADUbiFMdahMLsKHRs_8jU",
+    authDomain: "watchme-382bc.firebaseapp.com",
+    databaseURL: "https://watchme-382bc-default-rtdb.firebaseio.com",
+    projectId: "watchme-382bc",
+    storageBucket: "watchme-382bc.appspot.com",
+    messagingSenderId: "459154409461",
+    appId: "1:459154409461:web:038b92ffa3e13a9afbc2bc"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+
+        // Initialize Firebase
+
+        const database = getDatabase(app);
+        const auth = getAuth(app);
+
+
+
+ signUp.addEventListener('click',(e) => {
+
+        event.preventDefault()
+
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('pass').value;
+        var username = document.getElementById('username').value;
+
+createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          // Signed in$
+          const user = userCredential.user;
+
+          set(ref(database, 'users/' + user.uid),{
+              username: username,
+              email: email,
+
+          })
+
+          alert('user created!');
+          // ...
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+
+          alert(errorMessage);
+          // ..
+        });
+  });
+
+
+login.addEventListener('click',(e) =>{
+
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('pass').value;
+
+    signInWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+
+    const dt = new Date();
+    
+    update(ref(database, 'users/' + user.uid),{
+        last_login: dt,
+
+    })
+    alert('User loged in!');
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+
+    alert(errorMessage);
+
+
+  });
+
+})
+
+    </script>
 
 </body>
+
 </html>
