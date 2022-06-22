@@ -108,8 +108,7 @@
                                         </div>
                                     </div><!--~./ search-wrap ~-->
                                     <div class="bookmark-film"><a href="#"><span class="flaticon-bookmark"></span></a></div>
-                    !-- /.language-area -->
-                                    
+
                                 </div>
                             </div><!--~./ navigation-area ~-->
                         </div><!--  /.col-12 -->
@@ -188,7 +187,7 @@
                                                     <label><input id="termssignin" value="" type="checkbox"><span>I agree to the <a href="#">Terms, Privacy policy and fees</a></span></label>
                                                 </div>
                                                 <div class="form-btn-group">
-                                                    <button type="submit" class="btn btn-default">
+                                                    <button type="submit" id="signIn" class="btn btn-default">
                                                         Sign In
                                                     </button>
                                                 </div>
@@ -318,7 +317,6 @@
     <!-- All The JS Files
     ================================================== --> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
-    <script src="assets/js/index.js"></script>
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/video.popup.js"></script>
@@ -338,32 +336,8 @@
     <script src="assets/js/chartist.min.js"></script>
     <script src="assets/js/chartistPoint.js"></script>
     <script src="assets/js/main.js"></script><!-- main-js -->
+
+
+
 </body>
-
-<script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js";
-
-
-
-    const firebaseConfig = {
-      apiKey: "AIzaSyBw9GLQmVGDAyADUbiFMdahMLsKHRs_8jU",
-      authDomain: "watchme-382bc.firebaseapp.com",
-      databaseURL: "https://watchme-382bc-default-rtdb.firebaseio.com",
-      projectId: "watchme-382bc",
-      storageBucket: "watchme-382bc.appspot.com",
-      messagingSenderId: "459154409461",
-      appId: "1:459154409461:web:038b92ffa3e13a9afbc2bc"
-    };
-
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-
-    import { getDatabase, ref, set, child, get } 
-    from "https://www.gstatic.com/firebasejs/9.8.3/firebase-database.js";
-
-    const db = gatDatabase();
-
-</script>
-
 </html>
