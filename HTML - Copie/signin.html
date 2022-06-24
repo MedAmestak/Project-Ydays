@@ -396,6 +396,10 @@ signInWithEmailAndPassword(auth, email, password)
 
     })
     alert('User loged in!');
+signInWithEmailAndPassword(auth, email, password).then((cred) => {
+    window.location.href = "room.html"
+
+})
     // ...
   })
   .catch((error) => {
@@ -405,12 +409,13 @@ signInWithEmailAndPassword(auth, email, password)
     alert(errorMessage);
 
 
-  });
 
+  });
 });
 
-</script>
 
+
+</script>
 </body>
 
 </html>

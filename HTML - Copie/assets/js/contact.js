@@ -8,7 +8,7 @@ $(function() {
         var re = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
 
         if ($email.val() == '' || !re.test($email.val())){
-            $('#email').parent().append('<span class="error">Please provide valid Email.</span>');
+            $('#email').parent().append();
             $('#email').addClass('inputError');
             hasError = true;
         }
