@@ -6,7 +6,7 @@
     <title>Room</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='assets/css/main.css'>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel='stylesheet' type='text/css' media='screen' href='assets/css/room.css'>
 </head>
 <body>
@@ -22,7 +22,18 @@
        </div>
 
         <div id="nav__links">
-            <button id="chat__button"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" fill="#ede0e0" clip-rule="evenodd"><path d="M24 20h-3v4l-5.333-4h-7.667v-4h2v2h6.333l2.667 2v-2h3v-8.001h-2v-2h4v12.001zm-15.667-6l-5.333 4v-4h-3v-14.001l18 .001v14h-9.667zm-6.333-2h3v2l2.667-2h8.333v-10l-14-.001v10.001z"/></svg></button>
+            <!-- <button id="chat__button"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" fill="#ede0e0" clip-rule="evenodd"><path d="M24 20h-3v4l-5.333-4h-7.667v-4h2v2h6.333l2.667 2v-2h3v-8.001h-2v-2h4v12.001zm-15.667-6l-5.333 4v-4h-3v-14.001l18 .001v14h-9.667zm-6.333-2h3v2l2.667-2h8.333v-10l-14-.001v10.001z"/></svg></button> -->
+            <p id="username"></p>
+            <!-- <div class="avatar"><i class="fa fa-user"></i></div> -->
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn"><i class="fa fa-user"></i></button>
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="#" onclick="logout()">Logout</a>
+                  <a href="#">Profile Settings</a>
+                 
+                </div>
+              </div>
+              
             <!-- <a class="nav__link" href="/">
                 Lobby
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ede0e0" viewBox="0 0 24 24"><path d="M20 7.093v-5.093h-3v2.093l3 3zm4 5.907l-12-12-12 12h3v10h7v-5h4v5h7v-10h3zm-5 8h-3v-5h-8v5h-3v-10.26l7-6.912 7 6.99v10.182z"/></svg>
@@ -67,7 +78,90 @@
 
             </section>
         </div>
-    </main>
+    </main> 
     
+
+
+
+
+
+    <script type="module">
+
+        // Import the functions you need from the SDKs you need
+    
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-app.js";
+        import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-database.js";
+        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-auth.js";
+    
+    
+        // TODO: Add SDKs for Firebase products that you want to use
+    
+        // https://firebase.google.com/docs/web/setup#available-libraries
+    
+    
+        // Your web app's Firebase configuration
+    
+        // Import the functions you need from the SDKs you need
+
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyBw9GLQmVGDAyADUbiFMdahMLsKHRs_8jU",
+    authDomain: "watchme-382bc.firebaseapp.com",
+    databaseURL: "https://watchme-382bc-default-rtdb.firebaseio.com",
+    projectId: "watchme-382bc",
+    storageBucket: "watchme-382bc.appspot.com",
+    messagingSenderId: "459154409461",
+    appId: "1:459154409461:web:038b92ffa3e13a9afbc2bc"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+
+        // Initialize Firebase
+
+        const database = getDatabase(app);
+        const auth = getAuth(app);
+
+        const username = localStorage.getItem('username')
+        
+
+        function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+
+
+
+const user = auth().currentUser
+
+if(user){
+    document.getElementById('username').innerHTML = user.username;
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+
+function logout(){
+    window.localStorage.clear();
+    window.location.href = "./signup.html"
+}
+
+
+
+    </script>
 </body>
 </html>

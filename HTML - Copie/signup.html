@@ -435,7 +435,7 @@
         const database = getDatabase(app);
         const auth = getAuth(app);
 
-
+let user = auth.currentUser
 
  signUp.addEventListener('click',(e) => {
 
@@ -446,19 +446,21 @@
         var username = document.getElementById('username').value;
 
 createUserWithEmailAndPassword(auth, email, password)
-        .then((userCredential) => {
+        .then((user) => {
           // Signed in$
-          const user = userCredential.user;
-
+        //   const user = userCredential.user;
+             
           set(ref(database, 'users/' + user.uid),{
               username: username,
               email: email,
 
           })
-
+          console.log(user, user.username)
           alert('user created!');
-
-          // ...
+          localStorage.setItem('user-name', username)
+ 
+        //    window.location.href = "signin.html"
+                  // ...
         })
         .catch((error) => {
           const errorCode = error.code;

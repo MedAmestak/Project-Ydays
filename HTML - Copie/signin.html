@@ -378,7 +378,7 @@ import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/fir
 
 
 
-
+const username = localStorage.getItem('user-name')
 const botona = document.getElementById('login')
 botona.addEventListener('click',(e) => {
     event.preventDefault()
@@ -388,7 +388,9 @@ botona.addEventListener('click',(e) => {
 signInWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
     // Signed in
+    console.log(userCredential)
     const user = userCredential.user;
+    console.log(user);
     const dt = new Date();
 
     update(ref(database, 'users/' + user.uid),{
@@ -396,8 +398,12 @@ signInWithEmailAndPassword(auth, email, password)
 
     })
     alert('User loged in!');
+    localStorage.setItem('username', username)
+
 signInWithEmailAndPassword(auth, email, password).then((cred) => {
-    window.location.href = "room.html"
+    console.log(cred);
+
+    // window.location.href = "room.html"
 
 })
     // ...
@@ -411,6 +417,9 @@ signInWithEmailAndPassword(auth, email, password).then((cred) => {
 
 
   });
+
+//    auth.onA
+
 });
 
 
