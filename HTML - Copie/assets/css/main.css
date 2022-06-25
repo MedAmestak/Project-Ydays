@@ -54,15 +54,20 @@ a {
   border-radius: 50%;
 }
 
+#username{
+  text-transform: uppercase;
+}
 #nav {
   
   position: fixed;
-  float: right;
+  /* float: right; */
   top: 0;
   width: 65%;
   box-sizing: border-box;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
   border-bottom: 1px solid #000000;
   background-color: #1a1a1a;
   text-decoration: none;
